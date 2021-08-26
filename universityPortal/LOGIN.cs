@@ -17,6 +17,26 @@ namespace universityPortal
         {
             InitializeComponent();
             rolecombo.KeyUp += Rolecombo_KeyUp;
+            usertxt.KeyUp += Usertxt_KeyUp;
+            passtxt.KeyUp += Passtxt_KeyUp;
+
+        }
+
+        private void Passtxt_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                btntxt.Focus();
+            }
+        }
+
+        private void Usertxt_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                passtxt.Focus();
+
+            }
         }
 
         private void Rolecombo_KeyUp(object sender, KeyEventArgs e)
@@ -89,32 +109,25 @@ namespace universityPortal
 
         private void LOGIN_Load(object sender, EventArgs e)
         {
-            /*string[] rolecombo1 = { "ADMIN", "ADDMISSION", "FEES" };
-            foreach (string item in rolecombo1)
-            {
-                rolecombo.Items.Add(item);
-            }*/
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
 
 
 
-
-
-
-            Class2.sql.Open();
+           Class2.sql.Open();
             string qry = "select * from administration where username = @user and password = @pass ";
             SqlCommand cmd = new SqlCommand(qry,Class2.sql);
             cmd.Parameters.AddWithValue("@user",usertxt.Text);
             cmd.Parameters.AddWithValue("@pass",passtxt.Text);
+            
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows == true)
             {
                 MessageBox.Show("Login successfull");
-                if (rolecombo.SelectedItem=="admission")
+                if (rolecombo.SelectedItem=="ADMISSION")
                 {
                     admission ad = new admission();
                     ad.Show();
@@ -130,20 +143,24 @@ namespace universityPortal
 
                 }
 
+                else if (rolecombo.SelectedItem == "ADMIN")
+                {
+                    dashboard d = new dashboard();
+                    d.Show();
+                    this.Hide();
+
+                }
+
+
+
+
+
 
             }
             else
             {
                 MessageBox.Show(" LOGIN FAILED");
             }
-
-
-
-
-
-
-
-
 
             Class2.sql.Close();
         }
@@ -156,6 +173,11 @@ namespace universityPortal
         private void rolecombo_MouseClick(object sender, MouseEventArgs e)
         {
            
+        }
+
+        private void passtxt_TextChanged(object sender, EventArgs e)
+        {
+            passtxt.PasswordChar = '*';
         }
     }
 }

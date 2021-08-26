@@ -25,5 +25,25 @@ namespace universityPortal
         private void dashboard_Load(object sender, EventArgs e)
         {
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FEES f = new FEES();
+            f.Show();
+            this.Hide();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            admission ad = new admission();
+            ad.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

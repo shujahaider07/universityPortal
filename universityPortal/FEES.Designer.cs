@@ -30,24 +30,24 @@ namespace universityPortal
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.fullnametxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.rolltxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.coursetxt = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ammounttxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.paidtxt = new System.Windows.Forms.TextBox();
+            this.remaintxt = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,12 +63,12 @@ namespace universityPortal
             this.label1.TabIndex = 6;
             this.label1.Text = "FEES SUBMISSION";
             // 
-            // textBox1
+            // fullnametxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 9;
+            this.fullnametxt.Location = new System.Drawing.Point(124, 95);
+            this.fullnametxt.Name = "fullnametxt";
+            this.fullnametxt.Size = new System.Drawing.Size(152, 20);
+            this.fullnametxt.TabIndex = 2;
             // 
             // label2
             // 
@@ -81,12 +81,12 @@ namespace universityPortal
             this.label2.TabIndex = 8;
             this.label2.Text = "Full Name:";
             // 
-            // textBox2
+            // rolltxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(124, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 20);
-            this.textBox2.TabIndex = 11;
+            this.rolltxt.Location = new System.Drawing.Point(124, 64);
+            this.rolltxt.Name = "rolltxt";
+            this.rolltxt.Size = new System.Drawing.Size(152, 20);
+            this.rolltxt.TabIndex = 0;
             // 
             // label3
             // 
@@ -131,13 +131,13 @@ namespace universityPortal
             this.label6.TabIndex = 15;
             this.label6.Text = "Date:";
             // 
-            // comboBox1
+            // coursetxt
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(124, 131);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 21);
-            this.comboBox1.TabIndex = 17;
+            this.coursetxt.FormattingEnabled = true;
+            this.coursetxt.Location = new System.Drawing.Point(124, 131);
+            this.coursetxt.Name = "coursetxt";
+            this.coursetxt.Size = new System.Drawing.Size(152, 21);
+            this.coursetxt.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
@@ -146,12 +146,12 @@ namespace universityPortal
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 18;
             // 
-            // textBox3
+            // ammounttxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(102, 189);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 20);
-            this.textBox3.TabIndex = 20;
+            this.ammounttxt.Location = new System.Drawing.Point(102, 189);
+            this.ammounttxt.Name = "ammounttxt";
+            this.ammounttxt.Size = new System.Drawing.Size(90, 20);
+            this.ammounttxt.TabIndex = 3;
             // 
             // label7
             // 
@@ -199,6 +199,7 @@ namespace universityPortal
             this.button1.TabIndex = 26;
             this.button1.Text = "SAVE";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -228,19 +229,19 @@ namespace universityPortal
             this.button4.Text = "UPDATE";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // paidtxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(102, 215);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(90, 20);
-            this.textBox4.TabIndex = 30;
+            this.paidtxt.Location = new System.Drawing.Point(102, 215);
+            this.paidtxt.Name = "paidtxt";
+            this.paidtxt.Size = new System.Drawing.Size(90, 20);
+            this.paidtxt.TabIndex = 4;
             // 
-            // textBox5
+            // remaintxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(102, 242);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(90, 20);
-            this.textBox5.TabIndex = 31;
+            this.remaintxt.Location = new System.Drawing.Point(102, 242);
+            this.remaintxt.Name = "remaintxt";
+            this.remaintxt.Size = new System.Drawing.Size(90, 20);
+            this.remaintxt.TabIndex = 5;
             // 
             // dataGridView1
             // 
@@ -258,23 +259,23 @@ namespace universityPortal
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(856, 586);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.remaintxt);
+            this.Controls.Add(this.paidtxt);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.ammounttxt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.coursetxt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.rolltxt);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.fullnametxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FEES";
@@ -289,24 +290,24 @@ namespace universityPortal
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox fullnametxt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox rolltxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox coursetxt;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ammounttxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox paidtxt;
+        private System.Windows.Forms.TextBox remaintxt;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

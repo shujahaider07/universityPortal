@@ -58,13 +58,14 @@ namespace universityPortal
             this.label13 = new System.Windows.Forms.Label();
             this.mobtxt = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.citytxt = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.countrytxt = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.emailtxt = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.citytxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,7 +150,9 @@ namespace universityPortal
             this.admnotxt.Location = new System.Drawing.Point(175, 192);
             this.admnotxt.Name = "admnotxt";
             this.admnotxt.Size = new System.Drawing.Size(152, 20);
-            this.admnotxt.TabIndex = 7;
+            this.admnotxt.TabIndex = 0;
+            this.admnotxt.TextChanged += new System.EventHandler(this.admnotxt_TextChanged);
+            this.admnotxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.admnotxt_KeyPress);
             // 
             // label3
             // 
@@ -178,14 +181,14 @@ namespace universityPortal
             this.dateTimePicker1.Location = new System.Drawing.Point(785, 189);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // fullnametxt
             // 
             this.fullnametxt.Location = new System.Drawing.Point(175, 318);
             this.fullnametxt.Name = "fullnametxt";
             this.fullnametxt.Size = new System.Drawing.Size(152, 20);
-            this.fullnametxt.TabIndex = 12;
+            this.fullnametxt.TabIndex = 3;
             // 
             // label5
             // 
@@ -203,7 +206,7 @@ namespace universityPortal
             this.coursetxt.Location = new System.Drawing.Point(175, 362);
             this.coursetxt.Name = "coursetxt";
             this.coursetxt.Size = new System.Drawing.Size(152, 20);
-            this.coursetxt.TabIndex = 22;
+            this.coursetxt.TabIndex = 4;
             // 
             // label10
             // 
@@ -220,7 +223,7 @@ namespace universityPortal
             this.religiontxt.Location = new System.Drawing.Point(175, 405);
             this.religiontxt.Name = "religiontxt";
             this.religiontxt.Size = new System.Drawing.Size(152, 20);
-            this.religiontxt.TabIndex = 24;
+            this.religiontxt.TabIndex = 5;
             // 
             // label6
             // 
@@ -238,7 +241,7 @@ namespace universityPortal
             this.gendertext.Location = new System.Drawing.Point(581, 315);
             this.gendertext.Name = "gendertext";
             this.gendertext.Size = new System.Drawing.Size(152, 20);
-            this.gendertext.TabIndex = 26;
+            this.gendertext.TabIndex = 6;
             // 
             // label7
             // 
@@ -256,7 +259,7 @@ namespace universityPortal
             this.cnictxt.Location = new System.Drawing.Point(581, 362);
             this.cnictxt.Name = "cnictxt";
             this.cnictxt.Size = new System.Drawing.Size(152, 20);
-            this.cnictxt.TabIndex = 28;
+            this.cnictxt.TabIndex = 7;
             // 
             // label8
             // 
@@ -296,7 +299,7 @@ namespace universityPortal
             this.addresstxt.Location = new System.Drawing.Point(175, 520);
             this.addresstxt.Name = "addresstxt";
             this.addresstxt.Size = new System.Drawing.Size(152, 20);
-            this.addresstxt.TabIndex = 32;
+            this.addresstxt.TabIndex = 8;
             // 
             // label12
             // 
@@ -314,7 +317,8 @@ namespace universityPortal
             this.pincodetxt.Location = new System.Drawing.Point(175, 560);
             this.pincodetxt.Name = "pincodetxt";
             this.pincodetxt.Size = new System.Drawing.Size(152, 20);
-            this.pincodetxt.TabIndex = 34;
+            this.pincodetxt.TabIndex = 10;
+            this.pincodetxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pincodetxt_KeyPress);
             // 
             // label13
             // 
@@ -332,7 +336,7 @@ namespace universityPortal
             this.mobtxt.Location = new System.Drawing.Point(175, 599);
             this.mobtxt.Name = "mobtxt";
             this.mobtxt.Size = new System.Drawing.Size(152, 20);
-            this.mobtxt.TabIndex = 36;
+            this.mobtxt.TabIndex = 12;
             // 
             // label14
             // 
@@ -345,30 +349,12 @@ namespace universityPortal
             this.label14.TabIndex = 35;
             this.label14.Text = "Mobile:";
             // 
-            // citytxt
-            // 
-            this.citytxt.Location = new System.Drawing.Point(558, 520);
-            this.citytxt.Name = "citytxt";
-            this.citytxt.Size = new System.Drawing.Size(152, 20);
-            this.citytxt.TabIndex = 38;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(145)))));
-            this.label15.Location = new System.Drawing.Point(445, 520);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(38, 23);
-            this.label15.TabIndex = 37;
-            this.label15.Text = "City:";
-            // 
             // countrytxt
             // 
             this.countrytxt.Location = new System.Drawing.Point(558, 560);
             this.countrytxt.Name = "countrytxt";
             this.countrytxt.Size = new System.Drawing.Size(152, 20);
-            this.countrytxt.TabIndex = 40;
+            this.countrytxt.TabIndex = 11;
             // 
             // label16
             // 
@@ -386,7 +372,7 @@ namespace universityPortal
             this.emailtxt.Location = new System.Drawing.Point(558, 599);
             this.emailtxt.Name = "emailtxt";
             this.emailtxt.Size = new System.Drawing.Size(152, 20);
-            this.emailtxt.TabIndex = 42;
+            this.emailtxt.TabIndex = 13;
             // 
             // label17
             // 
@@ -410,9 +396,38 @@ namespace universityPortal
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(170, 48);
             this.button4.TabIndex = 45;
-            this.button4.Text = "SAVE AND PROCEED";
+            this.button4.Text = "NEXT STEP\r\n";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(145)))));
+            this.label18.Location = new System.Drawing.Point(462, 160);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(85, 25);
+            this.label18.TabIndex = 46;
+            this.label18.Text = "STEP 1";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(43)))), ((int)(((byte)(145)))));
+            this.label15.Location = new System.Drawing.Point(445, 520);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(38, 23);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "City:";
+            // 
+            // citytxt
+            // 
+            this.citytxt.Location = new System.Drawing.Point(558, 520);
+            this.citytxt.Name = "citytxt";
+            this.citytxt.Size = new System.Drawing.Size(152, 20);
+            this.citytxt.TabIndex = 9;
             // 
             // admission
             // 
@@ -420,6 +435,7 @@ namespace universityPortal
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.emailtxt);
             this.Controls.Add(this.label17);
@@ -458,7 +474,7 @@ namespace universityPortal
             this.Name = "admission";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.admission_Load);
+            this.Load += new System.EventHandler(this.admission_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -495,13 +511,14 @@ namespace universityPortal
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox mobtxt;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox citytxt;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox countrytxt;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox emailtxt;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox citytxt;
     }
 }
 

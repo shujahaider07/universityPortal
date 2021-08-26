@@ -93,7 +93,8 @@ namespace universityPortal
             this.passtxt.Location = new System.Drawing.Point(162, 363);
             this.passtxt.Name = "passtxt";
             this.passtxt.Size = new System.Drawing.Size(162, 20);
-            this.passtxt.TabIndex = 6;
+            this.passtxt.TabIndex = 3;
+            this.passtxt.TextChanged += new System.EventHandler(this.passtxt_TextChanged);
             // 
             // label4
             // 
@@ -127,7 +128,7 @@ namespace universityPortal
             this.rolecombo.Location = new System.Drawing.Point(162, 292);
             this.rolecombo.Name = "rolecombo";
             this.rolecombo.Size = new System.Drawing.Size(162, 21);
-            this.rolecombo.TabIndex = 8;
+            this.rolecombo.TabIndex = 0;
             this.rolecombo.SelectedIndexChanged += new System.EventHandler(this.rolecombo_SelectedIndexChanged);
             this.rolecombo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rolecombo_MouseClick);
             // 
@@ -137,7 +138,7 @@ namespace universityPortal
             this.btntxt.Name = "btntxt";
             this.btntxt.Size = new System.Drawing.Size(85, 31);
             this.btntxt.TabIndex = 9;
-            this.btntxt.Text = "button1";
+            this.btntxt.Text = "LOGIN";
             this.btntxt.UseVisualStyleBackColor = true;
             this.btntxt.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -147,7 +148,7 @@ namespace universityPortal
             this.usertxt.Location = new System.Drawing.Point(162, 328);
             this.usertxt.Name = "usertxt";
             this.usertxt.Size = new System.Drawing.Size(162, 21);
-            this.usertxt.TabIndex = 10;
+            this.usertxt.TabIndex = 1;
             // 
             // LOGIN
             // 
